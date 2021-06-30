@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %} Signup {% endblock title %}
+
+{% block body %}
+<div class="container my-3">
+<h1><b>Signup</b></h1>
+<form class='my-3' action="/signup" method="post">{% csrf_token %}
+
+
+  <div class="form-group my-3">
+    <label for="name">First Name</label>
+    <input type="text" class="form-control" id="fname" name="fname"aria-describedby="name">
+  </div>
+
+  <div class="form-group my-3">
+    <label for="name">Last Name</label>
+    <input type="text" class="form-control" id="lname" name="lname"aria-describedby="name">
+  </div>
+
+  
+  <div class="form-group my-3">
+    <label for="name">Username</label>
+    <input type="text" class="form-control" id="username" name="username"aria-describedby="name">
+  </div>
+
+  <div class="form-group my-3">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+  </div>
+
+
+  <div class="form-group my-3">
+    <label for="Password">Create Password</label>
+    <input  type= "password"  class="form-control" name="pass1" ></input>
+  </div>
+
+  <div class="form-group my-3">
+    <label for="Password">Confirm Password</label>
+    <input  type= "password"  class="form-control" name="pass2" ></input>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+ {% endblock %}
